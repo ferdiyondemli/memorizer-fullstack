@@ -18,9 +18,9 @@ on backend
 
 Click demo to try it by yourself!
 
-Netlify Demo: https://lnkd.in/dFe_hhGF
-
-Github: https://lnkd.in/dBaFsEJd
+Heroku Demo: https://fyondemli-memorizer.herokuapp.com/  
+ (email: admin, password: admin)
+Github:  https://github.com/ferdiyondemli/memorizer-fullstack
 
 Thanks to:   W3Schools.com  
 
