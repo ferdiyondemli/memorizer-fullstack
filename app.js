@@ -26,12 +26,8 @@ app.use(express.static(__dirname + '/public'));
 
  
   app.use("/", router);
-  
+   
  
- 
-
- 
-
 app.listen(process.env.PORT, ()=>{ console.log("3k is live")})
 
 
