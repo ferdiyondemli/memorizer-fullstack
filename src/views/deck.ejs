@@ -9,19 +9,21 @@
 
                   <div class="pt-1 pb-2 card-title">
                     <h5 class="card-title text-center pb-0 fs-4">Most Common 100 Words   </h5>
+                    <h6 class="card-subtitle mb-2 text-center text-muted">(Read word, guess meaning)</h6>
+
                    </div>
  <% if (version==1) { %>
  <div id="final"> <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                     
                       <div class="input-group">
                         
-                        <p type="text" name="question" class="col-12 d-flex flex-column align-items-center justify-content-center"  id="question" ><%-firstq %> </p>
+                        <p type="text" name="question" class=" text-decoration-underline col-12 d-flex flex-column align-items-center justify-content-center h4 text-capitalize fw-bolder"  id="question" ><%-firstq %> </p>
                       </div>
                     </div>
 
                     <div class="d-none col-12" id="answerdiv">
                       
-                      <p  name="answer"   id="answer" > <%-firsta %> </p>
+                      <p  name="answer"  class="h5 align-items-center justify-content-center   " id="answer" >  <%-firsta %> </p>
                      </div>
 
                      
@@ -37,12 +39,15 @@
                         <button class=" btn  w-100 btn-success m-1" onclick="deckupdate3days()">3 days</button></div>
                         
   
+                        <h6 class="card-subtitle m-2 text-muted ">(Choose a time when you want to repeat the word)</h6>
 
                     </div>
                      
                     <div class="col-12" id="answerer">
-                      <button class="btn btn-primary w-100  " onclick="unhideanswer()"   >Show answer</button>
+                      <button class="btn btn-primary w-100  " onclick="unhideanswer()"   >Show meaning</button> 
+
  </div>
+
                 <div class="card-footer" id="remainingcards">Remaining cards:  <%- realnow  %></div>
               </div>
             </div>
