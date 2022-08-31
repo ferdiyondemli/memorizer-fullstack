@@ -23,6 +23,8 @@ Heroku Demo: https://fyondemli-memorizer.herokuapp.com/
  
 Github:  https://github.com/ferdiyondemli/memorizer-fullstack
 
+linkedin: https://www.linkedin.com/in/ferdi-y%C3%B6ndemli-/
+
 Big thanks to:   W3Schools.com  
 
 #frontend #developement #javascript #html #css #bootstrap #webdevelopers #webdevelopment #frontenddeveloper #frontenddevelopment #frontenddev #heroku
