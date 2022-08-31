@@ -1,0 +1,212 @@
+<div class="row d-flex">
+  <div class="col-12 col-md-6 col-xxl-4"> 
+ 
+     
+ 
+              <div class="card ">
+
+                <div class="card-body">
+
+                  <div class="pt-1 pb-2 card-title">
+                    <h5 class="card-title text-center pb-0 fs-4">Most Common 100 Words   </h5>
+                   </div>
+ <% if (version==1) { %>
+ <div id="final"> <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                    
+                      <div class="input-group">
+                        
+                        <p type="text" name="question" class="col-12 d-flex flex-column align-items-center justify-content-center"  id="question" ><%-firstq %> </p>
+                      </div>
+                    </div>
+
+                    <div class="d-none col-12" id="answerdiv">
+                      
+                      <p  name="answer"   id="answer" > <%-firsta %> </p>
+                     </div>
+
+                     
+                     <div class="row  d-flex align-items-center  dater d-none" id="dater">
+                      
+  <div class="col-sm-4 align-items-center">
+    <button class=" btn  w-100 btn-danger m-1" id="btn5" onclick="deckupdate5min()"   >5 min</button>
+  </div>
+  <div class="col-sm-4 align-items-center">
+    <button class=" btn w-100 btn-primary mx-1 " onclick="deckupdate1day()"   >1 day</button>
+  </div>
+  <div class="col-sm-4 align-items-center">
+                        <button class=" btn  w-100 btn-success m-1" onclick="deckupdate3days()">3 days</button></div>
+                        
+  
+
+                    </div>
+                     
+                    <div class="col-12" id="answerer">
+                      <button class="btn btn-primary w-100  " onclick="unhideanswer()"   >Show answer</button>
+ </div>
+                <div class="card-footer" id="remainingcards">Remaining cards:  <%- realnow  %></div>
+              </div>
+            </div>
+  <% } %>
+                    <% if (version==0) { %>
+
+
+
+
+                      <div id="final"> <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                    
+                        <div class="input-group">
+                          
+                          <p type="text" name="question" class="col-12 d-flex flex-column align-items-center justify-content-center"  id="question" > Please be back again you <%-fivemin  %> cards due in five minutes </p>
+                        </div>
+                      </div>
+  
+                      <div class="d-none col-12" id="answerdiv">
+                        
+                        <p  name="answer"   id="answer" > <%-firsta %> </p>
+                       </div>
+  
+                       
+                       <div class="row  d-flex align-items-center  dater d-none" id="dater">
+                        
+    <div class="col-sm-4 align-items-center">
+      <button class=" btn  w-100 btn-danger m-1" id="btn5" onclick="deckupdate5min()"   >5 min</button>
+    </div>
+    <div class="col-sm-4 align-items-center">
+      <button class=" btn w-100 btn-primary mx-1 " onclick="deckupdate1day()"   >1 day</button>
+    </div>
+    <div class="col-sm-4 align-items-center">
+                          <button class=" btn  w-100 btn-success m-1" onclick="deckupdate3days()">3 days</button></div>
+                          
+    
+  
+                      </div>
+                       
+                      <div class="col-12 d-none" id="answerer">
+                        <button class="btn btn-primary w-100  " onclick="unhideanswer()"   >Show answer</button>
+   </div>
+                  <div class="card-footer" id="remainingcards">Remaining cards:  <%- realnow  %></div>
+                </div>
+              </div>
+                      
+                    <% } %>
+
+ 
+                   
+                     <p type="number"    class="d-none" id="idholder"><%-el  %></p>
+                     <p type="number"    class="d-none" id="fiveminholder"><%-fivemin  %></p>
+                     <p type="number"    class="d-none" id="onedayholder"><%-oneday  %></p>
+                     <p type="number"    class="d-none" id="threedays"><%-threedays  %></p>
+  </div>
+            
+ 
+  </div>
+  <div class="col-12 col-md-6 col-xxl-4">
+    
+    <div class="card ">
+
+      <div class="card-body">
+    <h5 class="card-title text-center pb-0 fs-4">Deck Status (Total:100)</h5>
+   <!-- Pie Chart -->
+   <canvas id="pieChart" style="max-height: 250px;"> Deck Status (Total:100)</canvas></div>
+</div>
+
+</div>
+<div class="col-12 col-md-6 col-xxl-4">
+
+<div class="card ">
+
+    <div class="card-body">
+      <h5 class="card-title text-center pb-0 fs-4">Cards By Due Time</h5>
+
+       <canvas id="barChart" style="max-height: 400px;"></canvas>
+     
+ 
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+    
+   <script>
+    let num=parseInt(document.querySelector("#idholder").innerHTML)
+    document.addEventListener("DOMContentLoaded", () => {
+      piech(num)
+    });   
+      function piech(num){
+            new Chart(document.querySelector('#pieChart'), {
+        type: 'pie',
+        data: {
+          labels: [
+        'Never Seen',
+        'Seen Once'
+      ],
+          datasets: [{
+            label: 'My First Dataset',
+            data: [num, 100-num],
+            backgroundColor: [
+              'rgb(0, 0, 0)',
+              'rgb(25,135,84)'
+            ],
+            hoverOffset: 4
+          }]
+        }
+      });
+      }
+
+
+  </script>
+
+
+
+
+
+
+ <script>
+
+let fivemin=parseInt(document.querySelector("#fiveminholder").innerHTML)
+
+let oneday=parseInt(document.querySelector("#onedayholder").innerHTML)
+
+let threedays=parseInt(document.querySelector("#threedays").innerHTML)
+        document.addEventListener("DOMContentLoaded", () => {
+          barch(fivemin, oneday, threedays)
+        });
+
+
+
+        function barch(fivemin, oneday, threedays){
+          new Chart(document.querySelector('#barChart'), {
+            type: 'bar',
+            data: {
+              labels: ['5 minutes', '1 day', '3 days'],
+              datasets: [{
+                label: 'Cards Count',
+                data: [fivemin, oneday, threedays ],
+                fill: true,
+                backgroundColor: [
+      'rgb(220,53,69)',
+      'rgb(13,110,253)',
+      'rgb(25,135,84)' 
+     
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)'
+    ],                tension: 0.1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        }
+</script>
