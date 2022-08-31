@@ -1,4 +1,4 @@
-Here is my first  fullstack web app. This app uses spaced repetition  technique  which uses repeated review of content following a schedule determined by a spaced repetition algorithm to improve long-term memory
+Here is my first  fullstack web app. This word "memorizer" app uses spaced repetition  technique  which uses repeated review of content following a schedule determined by a spaced repetition algorithm to improve long-term memory
 
 In this project I use;
 on frontend
