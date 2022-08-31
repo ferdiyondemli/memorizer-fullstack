@@ -1,4 +1,4 @@
-Here is my first  fullstack web app. This word "memorizer" app uses spaced repetition  technique  which uses repeated review of content following a schedule determined by a spaced repetition algorithm to improve long-term memory
+Here is my first  fullstack web app. This word "memorizer" app uses spaced repetition  technique  which uses repeated review of content following a schedule determined by a spaced repetition algorithm. Also, it has some usefull statics 
 
 In this project I use;
 on frontend
@@ -20,11 +20,12 @@ Click demo to try it by yourself!
 
 Heroku Demo: https://fyondemli-memorizer.herokuapp.com/  
  (email: admin, password: admin)
+ 
 Github:  https://github.com/ferdiyondemli/memorizer-fullstack
 
-Thanks to:   W3Schools.com  
+Big thanks to:   W3Schools.com  
 
- #frontend #developement #javascript #html #css #bootstrap #webdevelopers #webdevelopment #frontenddeveloper #frontenddevelopment #frontenddev #heroku
+#frontend #developement #javascript #html #css #bootstrap #webdevelopers #webdevelopment #frontenddeveloper #frontenddevelopment #frontenddev #heroku
   #js #mongodb  #axios #responsivedesign  #fullstackdevelopment   #nodejs #expressjs  #backenddeveloper #fullstackdeveloper #database #datamodeling #mongodb #mvc #mongoose #git #github
 
 
